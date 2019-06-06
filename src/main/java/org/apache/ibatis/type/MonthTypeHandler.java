@@ -34,8 +34,8 @@ public class MonthTypeHandler extends BaseTypeHandler<Month> {
   }
 
   @Override
-  public Month getNullableResult(ResultSet rs, String columnName) throws SQLException {
-    int month = rs.getInt(columnName);
+  public Month getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
+    int month = rs.getInt(columnLabel);
     return month == 0 && rs.wasNull() ? null : Month.of(month);
   }
 

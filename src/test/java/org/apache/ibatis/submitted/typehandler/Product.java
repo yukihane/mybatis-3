@@ -74,9 +74,9 @@ public class Product {
     }
 
     @Override
-    public ProductId getNullableResult(ResultSet rs, String columnName) throws SQLException {
+    public ProductId getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
       ProductId id = new ProductId();
-      id.setValue(rs.getInt(columnName));
+      id.setValue(rs.getInt(columnLabel));
       return id;
     }
 
@@ -101,7 +101,7 @@ public class Product {
     }
 
     @Override
-    public ProductId getNullableResult(ResultSet rs, String columnName) throws SQLException {
+    public ProductId getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
       return getConstantId();
     }
 

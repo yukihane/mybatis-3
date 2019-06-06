@@ -42,8 +42,8 @@ public class SqlxmlTypeHandler extends BaseTypeHandler<String> {
   }
 
   @Override
-  public String getNullableResult(ResultSet rs, String columnName) throws SQLException {
-    return sqlxmlToString(rs.getSQLXML(columnName));
+  public String getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
+    return sqlxmlToString(rs.getSQLXML(columnLabel));
   }
 
   @Override

@@ -38,8 +38,8 @@ public class JapaneseDateTypeHandler extends BaseTypeHandler<JapaneseDate> {
   }
 
   @Override
-  public JapaneseDate getNullableResult(ResultSet rs, String columnName) throws SQLException {
-    Date date = rs.getDate(columnName);
+  public JapaneseDate getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
+    Date date = rs.getDate(columnLabel);
     return getJapaneseDate(date);
   }
 

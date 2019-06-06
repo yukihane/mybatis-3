@@ -44,8 +44,8 @@ public class EnumTypeHandler<E extends Enum<E>> extends BaseTypeHandler<E> {
   }
 
   @Override
-  public E getNullableResult(ResultSet rs, String columnName) throws SQLException {
-    String s = rs.getString(columnName);
+  public E getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
+    String s = rs.getString(columnLabel);
     return s == null ? null : Enum.valueOf(type, s);
   }
 

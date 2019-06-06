@@ -45,8 +45,8 @@ public class EnumOrdinalTypeHandler<E extends Enum<E>> extends BaseTypeHandler<E
   }
 
   @Override
-  public E getNullableResult(ResultSet rs, String columnName) throws SQLException {
-    int ordinal = rs.getInt(columnName);
+  public E getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
+    int ordinal = rs.getInt(columnLabel);
     if (ordinal == 0 && rs.wasNull()) {
       return null;
     }

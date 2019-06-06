@@ -44,9 +44,9 @@ public class BlobInputStreamTypeHandler extends BaseTypeHandler<InputStream> {
    * @see ResultSet#getBlob(String)
    */
   @Override
-  public InputStream getNullableResult(ResultSet rs, String columnName)
+  public InputStream getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    return toInputStream(rs.getBlob(columnName));
+    return toInputStream(rs.getBlob(columnLabel));
   }
 
   /**

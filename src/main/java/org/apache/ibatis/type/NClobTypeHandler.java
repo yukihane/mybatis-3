@@ -35,9 +35,9 @@ public class NClobTypeHandler extends BaseTypeHandler<String> {
   }
 
   @Override
-  public String getNullableResult(ResultSet rs, String columnName)
+  public String getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    Clob clob = rs.getClob(columnName);
+    Clob clob = rs.getClob(columnLabel);
     return toString(clob);
   }
 

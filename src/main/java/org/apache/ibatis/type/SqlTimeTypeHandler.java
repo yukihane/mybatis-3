@@ -33,9 +33,9 @@ public class SqlTimeTypeHandler extends BaseTypeHandler<Time> {
   }
 
   @Override
-  public Time getNullableResult(ResultSet rs, String columnName)
+  public Time getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    return rs.getTime(columnName);
+    return rs.getTime(columnLabel);
   }
 
   @Override

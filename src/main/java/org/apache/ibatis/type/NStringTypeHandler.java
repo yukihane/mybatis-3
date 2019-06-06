@@ -32,9 +32,9 @@ public class NStringTypeHandler extends BaseTypeHandler<String> {
   }
 
   @Override
-  public String getNullableResult(ResultSet rs, String columnName)
+  public String getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    return rs.getNString(columnName);
+    return rs.getNString(columnLabel);
   }
 
   @Override

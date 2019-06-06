@@ -34,8 +34,8 @@ public class InstantTypeHandler extends BaseTypeHandler<Instant> {
   }
 
   @Override
-  public Instant getNullableResult(ResultSet rs, String columnName) throws SQLException {
-    Timestamp timestamp = rs.getTimestamp(columnName);
+  public Instant getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
+    Timestamp timestamp = rs.getTimestamp(columnLabel);
     return getInstant(timestamp);
   }
 

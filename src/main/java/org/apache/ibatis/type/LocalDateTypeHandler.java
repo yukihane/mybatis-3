@@ -34,8 +34,8 @@ public class LocalDateTypeHandler extends BaseTypeHandler<LocalDate> {
   }
 
   @Override
-  public LocalDate getNullableResult(ResultSet rs, String columnName) throws SQLException {
-    return rs.getObject(columnName, LocalDate.class);
+  public LocalDate getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
+    return rs.getObject(columnLabel, LocalDate.class);
   }
 
   @Override

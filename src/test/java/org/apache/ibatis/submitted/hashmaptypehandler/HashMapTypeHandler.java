@@ -34,7 +34,7 @@ public class HashMapTypeHandler extends BaseTypeHandler<HashMap<String, String>>
   }
 
   @Override
-  public HashMap<String, String> getNullableResult(ResultSet rs, String columnName) throws SQLException {
+  public HashMap<String, String> getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
     return null;
   }
 

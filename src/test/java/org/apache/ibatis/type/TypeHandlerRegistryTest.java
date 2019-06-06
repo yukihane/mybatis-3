@@ -73,7 +73,7 @@ class TypeHandlerRegistryTest {
     }
 
     @Override
-    public List<URI> getResult( ResultSet rs, String columnName ) {
+    public List<URI> getResult( ResultSet rs, String columnLabel ) {
       // do nothing, fake method
       return null;
     }
@@ -96,7 +96,7 @@ class TypeHandlerRegistryTest {
       }
 
       @Override
-      public List<URI> getNullableResult( ResultSet rs, String columnName ) {
+      public List<URI> getNullableResult( ResultSet rs, String columnLabel ) {
         // do nothing, fake method
         return null;
       }
@@ -181,7 +181,7 @@ class TypeHandlerRegistryTest {
     }
 
     @Override
-    public E getNullableResult(ResultSet rs, String columnName) throws SQLException {
+    public E getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
       return null;
     }
 

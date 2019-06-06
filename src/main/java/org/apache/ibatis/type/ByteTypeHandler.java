@@ -32,9 +32,9 @@ public class ByteTypeHandler extends BaseTypeHandler<Byte> {
   }
 
   @Override
-  public Byte getNullableResult(ResultSet rs, String columnName)
+  public Byte getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    byte result = rs.getByte(columnName);
+    byte result = rs.getByte(columnLabel);
     return result == 0 && rs.wasNull() ? null : result;
   }
 

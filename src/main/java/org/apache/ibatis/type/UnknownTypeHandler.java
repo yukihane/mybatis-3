@@ -46,10 +46,10 @@ public class UnknownTypeHandler extends BaseTypeHandler<Object> {
   }
 
   @Override
-  public Object getNullableResult(ResultSet rs, String columnName)
+  public Object getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    TypeHandler<?> handler = resolveTypeHandler(rs, columnName);
-    return handler.getResult(rs, columnName);
+    TypeHandler<?> handler = resolveTypeHandler(rs, columnLabel);
+    return handler.getResult(rs, columnLabel);
   }
 
   @Override

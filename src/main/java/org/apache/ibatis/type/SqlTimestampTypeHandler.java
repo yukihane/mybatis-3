@@ -33,9 +33,9 @@ public class SqlTimestampTypeHandler extends BaseTypeHandler<Timestamp> {
   }
 
   @Override
-  public Timestamp getNullableResult(ResultSet rs, String columnName)
+  public Timestamp getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    return rs.getTimestamp(columnName);
+    return rs.getTimestamp(columnLabel);
   }
 
   @Override

@@ -45,9 +45,9 @@ public class ClobReaderTypeHandler extends BaseTypeHandler<Reader> {
    * @see ResultSet#getClob(String)
    */
   @Override
-  public Reader getNullableResult(ResultSet rs, String columnName)
+  public Reader getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    return toReader(rs.getClob(columnName));
+    return toReader(rs.getClob(columnLabel));
   }
 
   /**

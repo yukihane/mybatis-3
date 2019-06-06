@@ -31,8 +31,8 @@ public class ByteObjectArrayTypeHandler extends BaseTypeHandler<Byte[]> {
   }
 
   @Override
-  public Byte[] getNullableResult(ResultSet rs, String columnName) throws SQLException {
-    byte[] bytes = rs.getBytes(columnName);
+  public Byte[] getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
+    byte[] bytes = rs.getBytes(columnLabel);
     return getBytes(bytes);
   }
 

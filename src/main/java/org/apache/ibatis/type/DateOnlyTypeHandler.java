@@ -33,9 +33,9 @@ public class DateOnlyTypeHandler extends BaseTypeHandler<Date> {
   }
 
   @Override
-  public Date getNullableResult(ResultSet rs, String columnName)
+  public Date getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    java.sql.Date sqlDate = rs.getDate(columnName);
+    java.sql.Date sqlDate = rs.getDate(columnLabel);
     if (sqlDate != null) {
       return new Date(sqlDate.getTime());
     }

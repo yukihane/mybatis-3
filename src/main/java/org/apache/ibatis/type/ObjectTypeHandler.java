@@ -32,9 +32,9 @@ public class ObjectTypeHandler extends BaseTypeHandler<Object> {
   }
 
   @Override
-  public Object getNullableResult(ResultSet rs, String columnName)
+  public Object getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    return rs.getObject(columnName);
+    return rs.getObject(columnLabel);
   }
 
   @Override

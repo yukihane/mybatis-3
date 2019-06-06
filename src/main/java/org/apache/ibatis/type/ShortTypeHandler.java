@@ -32,9 +32,9 @@ public class ShortTypeHandler extends BaseTypeHandler<Short> {
   }
 
   @Override
-  public Short getNullableResult(ResultSet rs, String columnName)
+  public Short getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    short result = rs.getShort(columnName);
+    short result = rs.getShort(columnLabel);
     return result == 0 && rs.wasNull() ? null : result;
   }
 

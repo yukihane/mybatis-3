@@ -34,8 +34,8 @@ public class LocalTimeTypeHandler extends BaseTypeHandler<LocalTime> {
   }
 
   @Override
-  public LocalTime getNullableResult(ResultSet rs, String columnName) throws SQLException {
-    return rs.getObject(columnName, LocalTime.class);
+  public LocalTime getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
+    return rs.getObject(columnLabel, LocalTime.class);
   }
 
   @Override

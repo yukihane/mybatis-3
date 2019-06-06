@@ -47,9 +47,9 @@ public class HasValueEnumTypeHandler<E extends Enum<E> & HasValue> extends
   }
 
   @Override
-  public E getNullableResult(ResultSet rs, String columnName)
+  public E getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    int value = rs.getInt(columnName);
+    int value = rs.getInt(columnLabel);
     if (rs.wasNull()) {
       return null;
     }

@@ -100,8 +100,8 @@ public class ArrayTypeHandler extends BaseTypeHandler<Object> {
   }
 
   @Override
-  public Object getNullableResult(ResultSet rs, String columnName) throws SQLException {
-    return extractArray(rs.getArray(columnName));
+  public Object getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
+    return extractArray(rs.getArray(columnLabel));
   }
 
   @Override

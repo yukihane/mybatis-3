@@ -119,8 +119,8 @@ class XmlConfigBuilderTest {
     }
 
     @Override
-    public E getNullableResult(ResultSet rs, String columnName) throws SQLException {
-      int index = rs.getInt(columnName) - 1;
+    public E getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
+      int index = rs.getInt(columnLabel) - 1;
       return index < 0 ? null : constants[index];
     }
 

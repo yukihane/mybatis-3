@@ -32,9 +32,9 @@ public class IntegerTypeHandler extends BaseTypeHandler<Integer> {
   }
 
   @Override
-  public Integer getNullableResult(ResultSet rs, String columnName)
+  public Integer getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    int result = rs.getInt(columnName);
+    int result = rs.getInt(columnLabel);
     return result == 0 && rs.wasNull() ? null : result;
   }
 

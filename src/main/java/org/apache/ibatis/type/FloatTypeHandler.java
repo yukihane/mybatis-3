@@ -32,9 +32,9 @@ public class FloatTypeHandler extends BaseTypeHandler<Float> {
   }
 
   @Override
-  public Float getNullableResult(ResultSet rs, String columnName)
+  public Float getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    float result = rs.getFloat(columnName);
+    float result = rs.getFloat(columnLabel);
     return result == 0 && rs.wasNull() ? null : result;
   }
 

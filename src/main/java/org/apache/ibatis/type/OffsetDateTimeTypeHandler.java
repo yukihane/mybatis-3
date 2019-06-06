@@ -34,8 +34,8 @@ public class OffsetDateTimeTypeHandler extends BaseTypeHandler<OffsetDateTime> {
   }
 
   @Override
-  public OffsetDateTime getNullableResult(ResultSet rs, String columnName) throws SQLException {
-    return rs.getObject(columnName, OffsetDateTime.class);
+  public OffsetDateTime getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
+    return rs.getObject(columnLabel, OffsetDateTime.class);
   }
 
   @Override

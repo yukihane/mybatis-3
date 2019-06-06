@@ -33,8 +33,8 @@ public class BigIntegerTypeHandler extends BaseTypeHandler<BigInteger> {
   }
 
   @Override
-  public BigInteger getNullableResult(ResultSet rs, String columnName) throws SQLException {
-    BigDecimal bigDecimal = rs.getBigDecimal(columnName);
+  public BigInteger getNullableResult(ResultSet rs, String columnLabel) throws SQLException {
+    BigDecimal bigDecimal = rs.getBigDecimal(columnLabel);
     return bigDecimal == null ? null : bigDecimal.toBigInteger();
   }
 

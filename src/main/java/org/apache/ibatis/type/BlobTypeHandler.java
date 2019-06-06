@@ -35,9 +35,9 @@ public class BlobTypeHandler extends BaseTypeHandler<byte[]> {
   }
 
   @Override
-  public byte[] getNullableResult(ResultSet rs, String columnName)
+  public byte[] getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    Blob blob = rs.getBlob(columnName);
+    Blob blob = rs.getBlob(columnLabel);
     byte[] returnValue = null;
     if (null != blob) {
       returnValue = blob.getBytes(1, (int) blob.length());

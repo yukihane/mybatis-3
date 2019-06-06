@@ -32,9 +32,9 @@ public class DoubleTypeHandler extends BaseTypeHandler<Double> {
   }
 
   @Override
-  public Double getNullableResult(ResultSet rs, String columnName)
+  public Double getNullableResult(ResultSet rs, String columnLabel)
       throws SQLException {
-    double result = rs.getDouble(columnName);
+    double result = rs.getDouble(columnLabel);
     return result == 0 && rs.wasNull() ? null : result;
   }
 
