@@ -76,11 +76,11 @@ public abstract class BaseTypeHandler<T> extends TypeReference<T> implements Typ
   }
 
   @Override
-  public T getResult(ResultSet rs, String columnName) throws SQLException {
+  public T getResult(ResultSet rs, String columnLabel) throws SQLException {
     try {
-      return getNullableResult(rs, columnName);
+      return getNullableResult(rs, columnLabel);
     } catch (Exception e) {
-      throw new ResultMapException("Error attempting to get column '" + columnName + "' from result set.  Cause: " + e, e);
+      throw new ResultMapException("Error attempting to get column '" + columnLabel + "' from result set.  Cause: " + e, e);
     }
   }
 
@@ -104,7 +104,7 @@ public abstract class BaseTypeHandler<T> extends TypeReference<T> implements Typ
 
   public abstract void setNonNullParameter(PreparedStatement ps, int i, T parameter, JdbcType jdbcType) throws SQLException;
 
-  public abstract T getNullableResult(ResultSet rs, String columnName) throws SQLException;
+  public abstract T getNullableResult(ResultSet rs, String columnLabel) throws SQLException;
 
   public abstract T getNullableResult(ResultSet rs, int columnIndex) throws SQLException;
 
